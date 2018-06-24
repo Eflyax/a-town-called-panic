@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link href="{$basePath}/css/bootstrap.css" rel="stylesheet">
+    <link href="{$basePath}/css/style.css" rel="stylesheet">
+
+    <title>{ifset title}{include title|stripHtml} | {/ifset}Panika v městečku</title>
+</head>
+
+<body>
+<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+
+{include content}
+
+{block scripts}
+    <script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
+    <script src="{$basePath}/js/jquery.min.js"></script>
+{/block}
+
+<script>
+    $('#nervy')[0].play();
+</script>
+</body>
+</html>
