@@ -1,12 +1,7 @@
 app/config/config.local.neon
 .idea
 vendor
-
-
 www/files/mp3/\.DS_Store
-
 www/files/\.DS_Store
-
 www/\.DS_Store
-
 \.DS_Store

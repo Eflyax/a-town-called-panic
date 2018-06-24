@@ -17,6 +17,11 @@ html, body {
     position: relative;
     margin: 10px;
     color: whitesmoke;
+    cursor: pointer;
+}
+
+.square-grid__cell:hover {
+    border: 1px solid gray;
 }
 
 .square-grid__content {

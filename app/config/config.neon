@@ -13,3 +13,4 @@ session:
 
 services:
 	router: App\RouterFactory::createRouter
+	- App\Libs\FileLoader
