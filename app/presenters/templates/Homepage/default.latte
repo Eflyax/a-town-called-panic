@@ -1,16 +1,19 @@
 {block content}
 
-<div class='square-grid'>
-    {foreach $fileNames as $fileName}
-        <div class='square-grid__cell square-grid__cell--7' data-name="{$fileName|webalize}">
-            <div class='square-grid__content'>
-                {$fileName}
+<br>
+
+{foreach $files as $file}
+    <div class="square" data-name="{$file->path}">
+        <div class=" content">
+            <div class="table">
+                <div class="table-cell">
+                    {$file->title}
+                </div>
+                <audio preload="auto" id="{$file->path}">
+                    <source src="{$basePath}/files/mp3/{$file->path}.mp3" type="audio/mpeg"/>
+                    <embed hidden="true" autostart="false" loop="false" src="{$basePath}/files/mp3/{$file->path}.mp3"/>
+                </audio>
             </div>
         </div>
-
-        <audio preload="auto" id="{$fileName|webalize}">
-            <source src="{$basePath}/files/mp3/{$fileName}.mp3" type="audio/mpeg"/>
-            <embed hidden="true" autostart="false" loop="false" src="{$basePath}/files/mp3/{$fileName}.mp3"/>
-        </audio>
-    {/foreach}
-</div>
+    </div>
+{/foreach}

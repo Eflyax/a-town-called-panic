@@ -1,16 +1,17 @@
 parameters:
 
-
 application:
 	errorPresenter: Error
 	mapping:
 		*: App\*Module\Presenters\*Presenter
 
-
 session:
 	expiration: 14 days
 
+extensions:
+    leanmapper: LeanMapper\Bridges\Nette\DI\LeanMapperExtension
 
 services:
-	router: App\RouterFactory::createRouter
-	- App\Libs\FileLoader
+    leanmapper.mapper: App\Model\MyMapper
+    router: App\RouterFactory::createRouter
+    - App\Libs\FileLoader

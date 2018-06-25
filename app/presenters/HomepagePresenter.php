@@ -2,18 +2,21 @@
 
 namespace App\Presenters;
 
-use App\Libs\FileLoader;
+use App\Model\Facade\FileRepository;
 use Nette;
 
 class HomepagePresenter extends Nette\Application\UI\Presenter
 {
 
-    /** @var FileLoader @inject */
-    public $fileLoader;
+    /** @var FileRepository @inject */
+    public $fileRepository;
 
     public function actionDefault()
     {
-        $this->template->fileNames = $this->fileLoader->getFileNames();
+        $this->template->files = $this->fileRepository->findBy(
+            [],
+            ['order' => 'ASC']
+        );
     }
 
 }

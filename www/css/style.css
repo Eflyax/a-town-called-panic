@@ -1,81 +1,74 @@
 html, body {
-    background-color: black;
+    background-color: whitesmoke;
     text-align: center;
 }
 
-.square-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
+.logo {
+    width: 90%;
 }
 
-.square-grid__cell {
-    background-color: #333333;
-    box-shadow: 0 0 0 1px black;
-    overflow: hidden;
+.square {
+    float: left;
     position: relative;
-    margin: 10px;
-    color: whitesmoke;
+    width: 30%;
+    padding-bottom: 30%; /* = width for a 1:1 aspect ratio */
+    margin: 1.66%;
+    background-color: #4e744b;
+    box-shadow: 0 0 0 3px #809500;
+    overflow: hidden;
     cursor: pointer;
 }
 
-.square-grid__cell:hover {
-    border: 1px solid gray;
-}
-
-.square-grid__content {
-    left: 0;
+.content {
     position: absolute;
-    top: 30%;
+    height: 90%; /* = 100% - 2*5% padding */
+    width: 90%; /* = 100% - 2*5% padding */
+    padding: 5%;
+}
+
+.table {
+    display: table;
     width: 100%;
-    text-align: center;
+    height: 100%;
+}
+
+.table-cell {
+    display: table-cell;
     vertical-align: middle;
-    padding: 5px;
 }
 
-.square-grid__cell:after {
-    content: '';
-    display: block;
-    padding-bottom: 100%;
+ul {
+    text-align: left;
+    margin: 5% 0 0;
+    padding: 0;
+    list-style-position: inside;
 }
 
-.square-grid__cell--10 {
-    flex-basis: 10%;
+li {
+    margin: 0 0 0 5%;
+    padding: 0;
 }
 
-.square-grid__cell--9 {
-    flex-basis: 11.1111111%;
+.content .rs {
+    width: auto;
+    height: auto;
+    max-height: 90%;
+    max-width: 100%;
 }
 
-.square-grid__cell--8 {
-    flex-basis: 12.5%;
+p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
 }
 
-.square-grid__cell--7 {
-    flex-basis: 14.2857143%;
-}
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    body {
 
-.square-grid__cell--6 {
-    flex-basis: 16.6666667%;
-}
+    }
 
-.square-grid__cell--5 {
-    flex-basis: 20%;
-}
-
-.square-grid__cell--4 {
-    flex-basis: 25%;
-}
-
-.square-grid__cell--3 {
-    flex-basis: 33.333%;
-}
-
-.square-grid__cell--2 {
-    flex-basis: 50%;
-}
-
-.square-grid__cell--1 {
-    flex-basis: 100%;
+    .logo {
+        width: 40%;
+    }
 }
