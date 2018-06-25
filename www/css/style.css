@@ -1,6 +1,6 @@
 html, body {
     background-color: whitesmoke;
-    text-align: center;
+    color: white;
 }
 
 .logo {
@@ -65,10 +65,19 @@ p {
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
     body {
-
+        text-align: center;
+        padding: 2% 15%;
     }
 
     .logo {
+        margin-bottom: 2%;
         width: 40%;
     }
+
+    .square {
+        width: 15%;
+        padding-bottom: 15%;
+        margin: 2.5%;
+    }
+
 }
