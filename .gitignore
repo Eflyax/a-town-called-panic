@@ -1,4 +1,5 @@
 app/config/config.local.neon
+app/config/deploy
 .idea
 vendor
 www/files/mp3/\.DS_Store
