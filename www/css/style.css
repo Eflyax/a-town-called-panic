@@ -22,7 +22,7 @@ html, body {
 .content {
     position: absolute;
     height: 90%; /* = 100% - 2*5% padding */
-    width: 90%; /* = 100% - 2*5% padding */
+    width: 100%; /* = 100% - 2*5% padding */
     padding: 5%;
 }
 
@@ -62,11 +62,22 @@ p {
     text-align: left;
 }
 
+.horse {
+    display: none;
+}
+
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
     body {
         text-align: center;
         padding: 2% 15%;
+    }
+
+    .horse {
+        display: block;
+        position:fixed;
+        top: 75%;
+        left: 90%;
     }
 
     .logo {
